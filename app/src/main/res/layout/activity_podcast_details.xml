@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PodcastDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/flCategory"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <com.cep.cep_podcast.views.components.RoundedCornerImageView
+                android:id="@+id/ivCategoryImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_medium"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sample_like"
+                app:cornerRadius="@dimen/margin_medium_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:background="@color/art_and_design_category"
+                android:paddingStart="@dimen/margin_medium"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingEnd="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_small"
+                android:text="@string/txt_lbl_art_n_design"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/ToolbarText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium_2"
+            android:text="Designing for everyone, everywhere with Yosef P." />
+
+        <include layout="@layout/viewpod_time_comments" />
+
+        <TextView
+            android:id="@+id/tvPodcastDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.3"
+            android:padding="@dimen/margin_medium_2"
+            android:text="@string/txt_lbl_sample_podcast_desc"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            android:backgroundTint="@color/media_bg"
+            app:cardCornerRadius="@dimen/margin_medium_2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvDurationTime"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/margin_medium_2"-->
+<!--                    android:layout_marginTop="@dimen/margin_xlarge"-->
+<!--                    android:text="05:15"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="@dimen/text_regular" />-->
+
+<!--                <ProgressBar-->
+<!--                    android:id="@+id/progressPodcast"-->
+<!--                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="5dp"-->
+<!--                    android:layout_alignTop="@id/tvDurationTime"-->
+<!--                    android:layout_marginStart="@dimen/margin_medium_2"-->
+<!--                    android:layout_marginTop="@dimen/margin_card_medium"-->
+<!--                    android:layout_marginEnd="@dimen/margin_medium_2"-->
+<!--                    android:layout_toEndOf="@id/tvDurationTime"-->
+<!--                    android:progress="30"-->
+<!--                    android:progressTint="@color/progressbar" />-->
+
+                <com.google.android.exoplayer2.ui.PlayerControlView
+                    android:id="@+id/playerControlView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    app:controller_layout_id="@layout/viewpod_mini_play_back"
+                    app:fastforward_increment="15000"
+                    app:rewind_increment="15000"
+                    app:show_timeout="0" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</ScrollView>

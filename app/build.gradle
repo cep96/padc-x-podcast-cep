@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -36,11 +37,51 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //GSON
+    implementation rootProject.ext.libraries.gson
+
+    //Retrofit
+    implementation rootProject.ext.libraries.retrofit
+    implementation rootProject.ext.libraries.retorfitConverter
+    implementation rootProject.ext.libraries.retrofitAdapter
+
+    //RxKotlin
+    implementation rootProject.ext.libraries.rxKotlin
+    implementation rootProject.ext.libraries.rxAndroid
+
+    //OKHttp
+    implementation rootProject.ext.libraries.okHttp
+
+    implementation rootProject.ext.libraries.glide
+    annotationProcessor rootProject.ext.libraries.glideAnnotation
+
+    // LiveData
+    implementation rootProject.ext.libraries.liveData
+    implementation rootProject.ext.libraries.viewModel
+
+    // lifecycle components
+    implementation rootProject.ext.libraries.lifeCycle
+    kapt rootProject.ext.libraries.lifeCycleAnnotation
+
+    // Annotation processor
+    kapt rootProject.ext.libraries.annotationProcessor
+
+    // Room
+    implementation rootProject.ext.libraries.room
+    kapt rootProject.ext.libraries.roomAnnotation
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.8.4'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.11.5'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.11.5'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.11.5'
+
 
 }

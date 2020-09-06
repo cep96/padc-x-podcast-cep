@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="primary">#ec5757</color>
+    <color name="primary_dark">#512DA8</color>
+    <color name="primary_light">#D1C4E9</color>
+    <color name="accent">#FF5722</color>
+    <color name="primary_text">#0a0a0a</color>
+    <color name="secondary_text">#252525</color>
+    <color name="tertary_text">#979797</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="text_bg">#F5F5F5</color>
+
+    <color name="media_bg">#5854a3</color>
+    <color name="progressbar">#bae2fe</color>
+    
+    <color name="art_and_design_category">#fdda8a</color>
+    <color name="culture_category">#cee6e7</color>
+    <color name="fashion_category">#e8d1e5</color>
 </resources>

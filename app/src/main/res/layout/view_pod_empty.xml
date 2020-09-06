@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cep.cep_podcast.views.viewpods.EmptyViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivEmptyImage"-->
+<!--        android:layout_width="160dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_height="160dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/icons8_empty_box_48"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvEmpty"-->
+<!--        android:text="@string/em_no_data"-->
+<!--        android:layout_below="@id/ivEmptyImage"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:textColor="@color/primary_text"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btnTryAgain"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Try Again"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_below="@id/tvEmpty"-->
+<!--        android:layout_marginTop="@dimen/margin_medium"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/sample_like"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="@dimen/margin_xxlarge"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_lbl_welcome"
+            android:layout_gravity="center_horizontal"
+            style="@style/ToolbarText"
+            android:layout_marginTop="@dimen/margin_medium_2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_lbl_empty_desc"
+            android:paddingStart="@dimen/margin_xlarge"
+            android:paddingEnd="@dimen/margin_xlarge"
+            android:lineSpacingMultiplier="1"
+            android:textSize="@dimen/text_regular_2x"
+            android:gravity="center_horizontal"
+            android:textColor="@color/secondary_text"
+            android:layout_marginTop="@dimen/margin_medium"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFindSomethingView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:backgroundTint="@color/progressbar"
+            android:text= "@string/btn_lbl_find_something_new"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/margin_medium"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReload"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:backgroundTint="@color/art_and_design_category"
+            android:text= "@string/btn_txt_reload"
+            android:textColor="@color/primary_text"
+            app:cornerRadius="@dimen/margin_medium"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</com.cep.cep_podcast.views.viewpods.EmptyViewPod>

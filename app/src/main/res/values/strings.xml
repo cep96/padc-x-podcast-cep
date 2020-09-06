@@ -9,4 +9,22 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_lbl_podcast">Podcast</string>
+
+    <string name="txt_lbl_sample_podcast_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="txt_lbl_up_next">Up <b>Next</b></string>
+    <string name="txt_lbl_art_n_design"><![CDATA[ATR & DESIGN]]></string>
+    <string name="txt_lbl_search_info">How to Influence with \nTactical Empathy</string>
+    <string name="txt_lbl_categories">Categories</string>
+    <string name="txt_lbl_welcome">Welcome</string>
+    <string name="txt_lbl_empty_desc">It looks like you aren\'t enrolled in \nany podcast. but it\'s easy to get \nstarted.</string>
+    <string name="btn_lbl_find_something_new">find something new</string>
+    <string name="btn_txt_reload">reload</string>
+    <string name="txt_lbl_home">Home</string>
+    <string name="txt_lbl_search">Search</string>
+    <string name="txt_lbl_download">Download</string>
+    <string name="txt_lbl_profile">Profile</string>
+    <string name="em_no_data">No Data Available</string>
 </resources>

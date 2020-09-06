@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navHome"
+        android:enabled="true"
+        android:icon="@drawable/homepage"
+        android:title="@string/txt_lbl_home"/>
+    <item
+        android:id="@+id/navSearch"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/txt_lbl_search"/>
+
+    <item
+        android:id="@+id/navDownload"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_cloud_download_24"
+        android:title="@string/txt_lbl_download"/>
+    <item
+        android:id="@+id/navProfile"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_outline_24"
+        android:title="@string/txt_lbl_profile"/>
+
+</menu>

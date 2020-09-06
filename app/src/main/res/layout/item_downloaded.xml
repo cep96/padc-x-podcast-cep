@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_medium"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.cep.cep_podcast.views.components.RoundedCornerImageView
+        android:id="@+id/ivDownloadPodcast"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        app:cornerRadius="@dimen/margin_medium"
+        android:src="@drawable/sample_like"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivDownloadPodcast"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingEnd="@dimen/margin_medium"
+        android:text="@string/txt_lbl_art_n_design"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_small"
+        android:background="@drawable/rounded_text_corner_bg"
+        android:layout_marginStart="@dimen/margin_medium" />
+
+    <TextView
+        android:id="@+id/tvDownloadedPodcastTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivDownloadPodcast"
+        android:layout_below="@id/tvCategory"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/txt_lbl_sample_podcast_desc"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium_2"/>
+
+    <TextView
+        android:id="@+id/tvDownloadedPodcastDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvDownloadedPodcastTitle"
+        android:text="@string/txt_lbl_sample_podcast_desc"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/tertary_text"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_toEndOf="@id/ivDownloadPodcast"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:paddingEnd="@dimen/margin_medium"
+        />
+
+
+</RelativeLayout>

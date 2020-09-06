@@ -1,10 +1,10 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -15,5 +15,34 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolbarText">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">@dimen/text_regular_3x</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomExoMediaButton">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_width">@dimen/video_view_exo_player_play_pause_button_dimen</item>
+        <item name="android:layout_height">@dimen/video_view_exo_player_play_pause_button_dimen</item>
+    </style>
+
+    <style name="CustomExoMediaButton.Play">
+        <item name="android:src">@drawable/ic_play_circle_filled</item>
+    </style>
+
+    <style name="CustomExoMediaButton.Pause">
+        <item name="android:src">@drawable/ic_pause_circle_filled</item>
+    </style>
+
+    <style name="CustomExoMediaButton.Rewind">
+        <item name="android:src">@drawable/icons8_skip_15_seconds_back_48</item>
+    </style>
+
+    <style name="CustomExoMediaButton.Ffwd">
+        <item name="android:src">@drawable/icons8_skip_ahead_15_seconds_48</item>
+    </style>
 
 </resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_medium">
+
+    <com.cep.cep_podcast.views.components.RoundedCornerImageView
+        android:id="@+id/ivPodcastUpNext"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        app:cornerRadius="@dimen/margin_medium"
+        android:src="@drawable/sample_like"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivPodcastUpNext"
+        android:paddingStart="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="@string/txt_lbl_art_n_design"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_small"
+        android:background="@drawable/rounded_text_corner_bg"
+        android:layout_marginStart="@dimen/margin_medium" />
+
+    <ImageView
+        android:id="@+id/ivDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_cloud_download_24"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/tvUpNextPodcastTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivPodcastUpNext"
+        android:layout_toStartOf="@id/ivDownload"
+        android:layout_below="@id/tvCategory"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/txt_lbl_sample_podcast_desc"
+        android:paddingStart="@dimen/margin_medium_2"
+        android:paddingEnd="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarUpNext"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_toEndOf="@id/ivPodcastUpNext"
+        android:layout_below="@id/tvUpNextPodcastTitle"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:progress="70"
+        android:progressTint="@color/progressbar"
+        android:layout_toStartOf="@id/tvUpNextPodcastLeftTime"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        />
+
+    <TextView
+        android:id="@+id/tvUpNextPodcastLeftTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvUpNextPodcastTitle"
+        android:text="1 hr left"
+        android:textColor="@color/tertary_text"
+        android:layout_marginTop="@dimen/margin_medium"
+        />
+
+</RelativeLayout>

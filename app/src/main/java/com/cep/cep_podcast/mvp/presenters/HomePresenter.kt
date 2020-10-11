@@ -4,6 +4,7 @@ import androidx.lifecycle.LifecycleOwner
 import com.cep.cep_podcast.device.player.MediaPlayer
 import com.cep.cep_podcast.device.player.MediaPlayerImpl
 import com.cep.cep_podcast.mvp.views.HomeView
+import com.cep.shared.presenters.BasePresenter
 import java.io.File
 
 interface HomePresenter: BasePresenter<HomeView> {

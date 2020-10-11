@@ -14,6 +14,7 @@ import com.cep.cep_podcast.data.vos.GenreVO
 import com.cep.cep_podcast.mvp.presenters.SearchPresenter
 import com.cep.cep_podcast.mvp.presenters.impls.SearchPresenterImpl
 import com.cep.cep_podcast.mvp.views.SearchView
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment : Fragment(), SearchView {
@@ -70,5 +71,9 @@ class SearchFragment : Fragment(), SearchView {
 
     override fun displayCategories(categories: List<GenreVO>) {
         mCategoryAdapter.setNewData(categories.toMutableList())
+    }
+
+    override fun showErrorMessage(message: String) {
+        Snackbar.make(requireActivity().window.decorView, message, Snackbar.LENGTH_LONG)
     }
 }

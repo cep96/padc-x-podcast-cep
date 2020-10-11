@@ -1,7 +1,7 @@
-package com.cep.cep_podcast.mvp.presenters
+package com.cep.shared.presenters
 
 import androidx.lifecycle.ViewModel
-import com.cep.cep_podcast.mvp.views.BaseView
+import com.cep.shared.views.BaseView
 
 abstract class AbstractBasePresenter<T: BaseView>: BasePresenter<T>, ViewModel() {
 

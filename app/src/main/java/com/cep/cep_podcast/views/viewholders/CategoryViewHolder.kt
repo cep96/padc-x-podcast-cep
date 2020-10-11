@@ -4,6 +4,7 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.cep.cep_podcast.data.dummydata.DummyPodcast
 import com.cep.cep_podcast.data.vos.GenreVO
+import com.cep.shared.viewholders.BaseViewHolder
 import kotlinx.android.synthetic.main.item_category.view.*
 
 class CategoryViewHolder(itemView: View) : BaseViewHolder<GenreVO>(itemView) {
@@ -12,9 +13,9 @@ class CategoryViewHolder(itemView: View) : BaseViewHolder<GenreVO>(itemView) {
 
         itemView.tvCategory.text = data.name
 
-        Glide.with(itemView.context)
-            .load(data.image)
-            .into(itemView.ivCategoryImage)
+//        Glide.with(itemView.context)
+//            .load(data.image)
+//            .into(itemView.ivCategoryImage)
 
         itemView.setOnClickListener {
 

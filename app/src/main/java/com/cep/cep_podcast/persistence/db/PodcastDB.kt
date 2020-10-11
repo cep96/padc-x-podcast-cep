@@ -2,16 +2,12 @@ package com.cep.cep_podcast.persistence.db
 
 import android.content.Context
 import androidx.room.*
-import com.cep.cep_podcast.data.vos.DownloadedPodcastVO
-import com.cep.cep_podcast.data.vos.GenreVO
-import com.cep.cep_podcast.data.vos.ItemVO
-import com.cep.cep_podcast.data.vos.PodcastVO
+import com.cep.cep_podcast.data.vos.*
 import com.cep.cep_podcast.persistence.daos.PodcastDao
-import com.cep.cep_podcast.persistence.typeconverters.DataConverter
-import com.cep.cep_podcast.persistence.typeconverters.DetailsConverter
+import com.cep.cep_podcast.persistence.typeconverters.*
 
-@Database(entities = [PodcastVO::class, ItemVO::class, GenreVO::class, DownloadedPodcastVO::class], version = 2, exportSchema = false)
-@TypeConverters(DataConverter::class, DetailsConverter::class)
+@Database(entities = [PodcastVO::class, ItemVO::class, GenreVO::class, DownloadedPodcastVO::class, PodcastDetailsVO::class, DataVO::class], version = 1, exportSchema = false)
+@TypeConverters(DataConverter::class, DetailsConverter::class, ExtraConverter::class, LookingForConverter::class, GenreTypeConverter::class, PodcastConverter::class)
 abstract class PodcastDB: RoomDatabase() {
 
     companion object{

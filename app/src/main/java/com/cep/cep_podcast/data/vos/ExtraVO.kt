@@ -1,16 +1,16 @@
 package com.cep.cep_podcast.data.vos
 
 data class ExtraVO(
-    val facebook_handle: String,
-    val google_url: String,
-    val instagram_handle: String,
-    val linkedin_url: String,
-    val patreon_handle: String,
-    val spotify_url: String,
-    val twitter_handle: String,
-    val url1: String,
-    val url2: String,
-    val url3: String,
-    val wechat_handle: String,
-    val youtube_url: String
+    var facebook_handle: String? = "",
+    var google_url: String? = "",
+    var instagram_handle: String? = "",
+    var linkedin_url: String? = "",
+    var patreon_handle: String? = "",
+    var spotify_url: String? = "",
+    var twitter_handle: String? = "",
+    var url1: String? = "",
+    var url2: String? = "",
+    var url3: String? = "",
+    var wechat_handle: String? = "",
+    var youtube_url: String? = ""
 )

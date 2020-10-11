@@ -11,12 +11,15 @@ import android.view.View
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.cep.cep_podcast.R
+import com.cep.cep_podcast.data.vos.DataVO
 import com.cep.cep_podcast.data.vos.DownloadedPodcastVO
+import com.cep.cep_podcast.data.vos.PodcastDetailsVO
 import com.cep.cep_podcast.mvp.presenters.PodcastDetailsPresenter
 import com.cep.cep_podcast.mvp.presenters.impls.PodcastDetailsPresenterImpl
 import com.cep.cep_podcast.mvp.views.PodcastDetailsView
 import com.cep.cep_podcast.network.responses.GetDetailsEpisodeResponse
 import com.google.android.exoplayer2.util.Util
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_podcast_details.*
 import kotlinx.android.synthetic.main.activity_podcast_details.playerControlView
 import kotlinx.android.synthetic.main.activity_podcast_details.tvPodcastDescription
@@ -60,21 +63,21 @@ class PodcastDetailsActivity : AppCompatActivity(), PodcastDetailsView {
         }
     }
 
-    override fun displayPodcastDetails(podcast: GetDetailsEpisodeResponse) {
+    override fun displayPodcastDetails(podcast: DataVO) {
 
         Glide.with(this)
             .load(podcast.image)
             .into(ivCategoryImage)
 
-        tvTitle.text = podcast.podcast.title
+        tvTitle.text = podcast.title
 
-        tvPodcastDescription.text = Html.fromHtml(podcast.podcast.description)
+        tvPodcastDescription.text = Html.fromHtml(podcast.description)
 
-        val url = podcast.audio
+        val url = podcast.listennotes_url
 
         playerControlView.player = mPresenter.getPlayer().getPlayerImpl(this)
         Log.d("Podcast Url", "==> $url")
-        mPresenter.play(url)
+        mPresenter.play(url!!)
 
     }
 
@@ -92,6 +95,10 @@ class PodcastDetailsActivity : AppCompatActivity(), PodcastDetailsView {
         playerControlView.player = mPresenter.getPlayer().getPlayerImpl(this)
         Log.d("Podcast Url", "==> $url")
         mPresenter.play(url)
+    }
+
+    override fun showErrorMessage(message: String) {
+        Snackbar.make(window.decorView, message, Snackbar.LENGTH_LONG)
     }
 
     override fun onStart() {

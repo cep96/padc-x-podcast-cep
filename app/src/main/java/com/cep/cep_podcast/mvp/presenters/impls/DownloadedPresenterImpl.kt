@@ -2,12 +2,11 @@ package com.cep.cep_podcast.mvp.presenters.impls
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.cep.cep_podcast.data.dummydata.DummyPodcast
 import com.cep.cep_podcast.data.models.PodcastModel
 import com.cep.cep_podcast.data.models.PodcastModelImpl
-import com.cep.cep_podcast.mvp.presenters.AbstractBasePresenter
 import com.cep.cep_podcast.mvp.presenters.DownloadedPresenter
 import com.cep.cep_podcast.mvp.views.DownloadView
+import com.cep.shared.presenters.AbstractBasePresenter
 
 class DownloadedPresenterImpl: DownloadedPresenter, AbstractBasePresenter<DownloadView>() {
 

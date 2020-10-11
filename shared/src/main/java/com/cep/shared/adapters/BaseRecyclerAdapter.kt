@@ -1,7 +1,7 @@
-package com.cep.cep_podcast.adapters
+package com.cep.shared.adapters
 
 import androidx.recyclerview.widget.RecyclerView
-import com.cep.cep_podcast.views.viewholders.BaseViewHolder
+import com.cep.shared.viewholders.BaseViewHolder
 
 abstract class BaseRecyclerAdapter<T: BaseViewHolder<W>,W>:
     RecyclerView.Adapter<T>() {

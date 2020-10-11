@@ -4,6 +4,7 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.cep.cep_podcast.data.dummydata.DummyPodcast
 import com.cep.cep_podcast.data.vos.DownloadedPodcastVO
+import com.cep.shared.viewholders.BaseViewHolder
 import kotlinx.android.synthetic.main.item_downloaded.view.*
 
 class DownloadedViewHolder(itemView: View, private val delegate: Delegate) : BaseViewHolder<DownloadedPodcastVO>(itemView) {

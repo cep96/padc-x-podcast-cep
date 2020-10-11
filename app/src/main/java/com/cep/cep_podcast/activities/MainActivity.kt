@@ -5,11 +5,11 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.cep.cep_podcast.R
-import com.cep.cep_podcast.adapters.MainViewPagerAdapter
 import com.cep.cep_podcast.fragments.DownloadedFragment
 import com.cep.cep_podcast.fragments.HomeFragment
 import com.cep.cep_podcast.fragments.ProfileFragment
 import com.cep.cep_podcast.fragments.SearchFragment
+import com.cep.shared.activities.BaseActivity
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : BaseActivity() {

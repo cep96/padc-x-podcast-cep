@@ -8,14 +8,12 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.net.Uri
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.text.Html
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,14 +22,14 @@ import com.cep.cep_podcast.R
 import com.cep.cep_podcast.activities.PodcastDetailsActivity
 import com.cep.cep_podcast.adapters.PodcastRecyclerAdapter
 import com.cep.cep_podcast.data.vos.DataVO
-import com.cep.cep_podcast.data.vos.ItemVO
+import com.cep.cep_podcast.data.vos.PodcastDetailsVO
 import com.cep.cep_podcast.mvp.presenters.HomePresenter
 import com.cep.cep_podcast.mvp.presenters.impls.HomePresenterImpl
 import com.cep.cep_podcast.mvp.views.HomeView
 import com.cep.cep_podcast.network.responses.GetRandomEpisodeResponse
 import com.cep.cep_podcast.utils.MarshMallowPermissionUtils
 import com.cep.cep_podcast.views.viewholders.PodcastViewHolder
-import com.google.android.exoplayer2.util.Util
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.content_collapsing.*
 import kotlinx.android.synthetic.main.content_scrolling.*
 import java.io.File
@@ -111,12 +109,13 @@ class HomeFragment : Fragment(), HomeView, PodcastViewHolder.Delegate {
 
     }
 
-    override fun displayPodcast(podcasts: List<ItemVO>) {
+    override fun displayPodcast(podcasts: List<DataVO>) {
         Log.d("HomeFragment", "==> $podcasts and ${podcasts.size}")
+
         mUpNextPodcastAdapter.setNewData(podcasts.toMutableList())
     }
 
-    override fun displayRandomPodcast(podcast: GetRandomEpisodeResponse) {
+    override fun displayRandomPodcast(podcast: PodcastDetailsVO) {
 
         Glide.with(this.requireContext())
             .load(podcast.image)
@@ -125,13 +124,17 @@ class HomeFragment : Fragment(), HomeView, PodcastViewHolder.Delegate {
         tvPodcastTitle.text = podcast.title
         tvDescription.text = Html.fromHtml(podcast.description)
 
-        val url = podcast.audio
+        val url = podcast.listennotes_url
 
         playerControlView.player = mPresenter.getPlayer().getPlayerImpl(this.requireContext())
         Log.d("Podcast Url", "==> $url")
-        mPresenter.play(url)
+        mPresenter.play(url!!)
 
 
+    }
+
+    override fun showErrorMessage(message: String) {
+        Snackbar.make(requireActivity().window.decorView, message, Snackbar.LENGTH_LONG)
     }
 
     override fun onStart() {

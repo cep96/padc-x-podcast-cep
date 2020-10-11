@@ -17,33 +17,33 @@ abstract class BaseModel {
     private lateinit var retrofit: Retrofit
     protected lateinit var mPodcastDB: PodcastDB
 
-    init {
-        initNetwork()
-    }
-
-    private fun initNetwork() {
-        val okHttpClient = OkHttpClient.Builder()
-            .connectTimeout(15, TimeUnit.SECONDS)
-            .readTimeout(15, TimeUnit.SECONDS)
-            .writeTimeout(15, TimeUnit.SECONDS)
-            .addInterceptor(Interceptor.invoke {chain ->
-                val request = chain.request().newBuilder()
-                    .addHeader("X-ListenAPI-Key", API_KEY)
-                    .build()
-
-                chain.proceed(request)
-            })
-            .build()
-
-        retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .client(okHttpClient)
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build()
-
-
-    }
+//    init {
+//        initNetwork()
+//    }
+//
+//    private fun initNetwork() {
+//        val okHttpClient = OkHttpClient.Builder()
+//            .connectTimeout(15, TimeUnit.SECONDS)
+//            .readTimeout(15, TimeUnit.SECONDS)
+//            .writeTimeout(15, TimeUnit.SECONDS)
+//            .addInterceptor(Interceptor.invoke {chain ->
+//                val request = chain.request().newBuilder()
+//                    .addHeader("X-ListenAPI-Key", API_KEY)
+//                    .build()
+//
+//                chain.proceed(request)
+//            })
+//            .build()
+//
+//        retrofit = Retrofit.Builder()
+//            .baseUrl(BASE_URL)
+//            .client(okHttpClient)
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+//            .build()
+//
+//
+//    }
 
     fun providePodcastApiService(): PodcastApi{
         return retrofit.create(PodcastApi::class.java)
@@ -53,8 +53,8 @@ abstract class BaseModel {
         mPodcastDB = PodcastDB.getDBInstance(context)
     }
 
-    fun init(context: Context){
-        initDatabase(context)
-    }
+//    fun init(context: Context){
+//        initDatabase(context)
+//    }
 
 }

@@ -2,11 +2,10 @@ package com.cep.cep_podcast.mvp.presenters.impls
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.cep.cep_podcast.data.dummydata.DummyPodcast
 import com.cep.cep_podcast.data.models.PodcastModelImpl
-import com.cep.cep_podcast.mvp.presenters.AbstractBasePresenter
 import com.cep.cep_podcast.mvp.presenters.SearchPresenter
 import com.cep.cep_podcast.mvp.views.SearchView
+import com.cep.shared.presenters.AbstractBasePresenter
 
 class SearchPresenterImpl: SearchPresenter, AbstractBasePresenter<SearchView>() {
 
@@ -18,11 +17,19 @@ class SearchPresenterImpl: SearchPresenter, AbstractBasePresenter<SearchView>() 
 //        DummyPodcast(9), DummyPodcast(10)
 //    )
     private val mPodcastModel = PodcastModelImpl
+//    private val mPodcastFirebaseModel: PodcastFirebaseModel = PodcastFirebaseModelImpl
 
     override fun onUIReadyForCategories(lifecycleOwner: LifecycleOwner) {
-//        mView?.displayCategories(dummyList)
-        loadCategoryFromApi()
-        requestCategory(lifecycleOwner)
+
+//        loadCategoryFromApi()
+//        requestCategory(lifecycleOwner)
+        mPodcastModel.getGenresFromFirebaseAndSaveToDB(onError = {
+
+        })
+        mPodcastModel.getGenres()
+            .observe(lifecycleOwner, Observer {
+                mView?.displayCategories(it)
+            })
     }
 
     private fun requestCategory(lifecycleOwner: LifecycleOwner) {
@@ -34,8 +41,8 @@ class SearchPresenterImpl: SearchPresenter, AbstractBasePresenter<SearchView>() 
     }
 
     private fun loadCategoryFromApi() {
-        mPodcastModel.getGenresFromApiAndSaveToDB (
-            onError = {}
-        )
+//        mPodcastModel.getGenresFromApiAndSaveToDB (
+//            onError = {}
+//        )
     }
 }

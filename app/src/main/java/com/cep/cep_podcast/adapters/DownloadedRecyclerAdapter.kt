@@ -6,6 +6,7 @@ import com.cep.cep_podcast.R
 import com.cep.cep_podcast.data.dummydata.DummyPodcast
 import com.cep.cep_podcast.data.vos.DownloadedPodcastVO
 import com.cep.cep_podcast.views.viewholders.DownloadedViewHolder
+import com.cep.shared.adapters.BaseRecyclerAdapter
 
 class DownloadedRecyclerAdapter(
     private val delegate: DownloadedViewHolder.Delegate

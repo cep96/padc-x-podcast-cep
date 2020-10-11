@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "596282435876",
+    "firebase_url": "https://podcast-app-62625.firebaseio.com",
+    "project_id": "podcast-app-62625",
+    "storage_bucket": "podcast-app-62625.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596282435876:android:788a3dedd8baa58f236bb1",
+        "android_client_info": {
+          "package_name": "com.cep.cep_podcast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596282435876-lop8egcb3o4gi8itahaepj848n3g4g34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8XBEuMvmJGCCApBxmq35ANbxjNXIGcrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596282435876-lop8egcb3o4gi8itahaepj848n3g4g34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

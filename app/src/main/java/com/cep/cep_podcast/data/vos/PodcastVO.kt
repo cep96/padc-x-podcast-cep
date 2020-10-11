@@ -2,14 +2,16 @@ package com.cep.cep_podcast.data.vos
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.firebase.database.IgnoreExtraProperties
 
+@IgnoreExtraProperties
 @Entity(tableName = "podcast")
 data class PodcastVO(
-    @PrimaryKey
-    val id: String,
-    val image: String,
-    val listennotes_url: String,
-    val publisher: String,
-    val thumbnail: String,
-    val title: String
+    @PrimaryKey(autoGenerate = false)
+    var id: String = "",
+    var image: String? = "",
+    var listennotes_url: String? = "",
+    var publisher: String? = "",
+    var thumbnail: String? = "",
+    var title: String? = ""
 )

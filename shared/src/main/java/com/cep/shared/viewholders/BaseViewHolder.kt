@@ -1,4 +1,4 @@
-package com.cep.cep_podcast.views.viewholders
+package com.cep.shared.viewholders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
